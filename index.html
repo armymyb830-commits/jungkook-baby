@@ -1,23 +1,34 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melt & Glow</title>
-    <style>
-        /* ここに CodePen の CSS をすべて貼り付ける */
-        :root { --primary-pink: #ffafbd; ... }
-        /* (中略) */
-    </style>
-</head>
-<body>
+<div id="app">
+  <header>
+    <h1>Melt & Glow</h1>
+    <p>脂肪燃焼とデトックスの記録</p>
+  </header>
 
-    <div id="app"> ... </div>
+  <main>
+    <section class="card burner">
+      <h2>🔥 Fat Burn Timer</h2>
+      
+      <div class="timer-setting">
+        <input type="number" id="inputMins" value="20" min="1" max="99"> 
+        <span>分にセットする</span>
+      </div>
 
-    <script>
-        /* ここに CodePen の JS をすべて貼り付ける */
-        let timeLeft = 1200; ...
-        /* (中略) */
-    </script>
-</body>
-</html>
+      <div class="timer-display" id="display">20:00</div>
+      
+      <div class="controls">
+        <button id="startBtn">START</button>
+        <button id="resetBtn" class="secondary">SET / RESET</button>
+      </div>
+      
+      <div id="message" class="celebration-message"></div>
+      <p class="hint">20分以上の有酸素運動で燃焼効率がUPします🌿</p>
+    </section>
+
+    <section class="card water">
+      <h2>💧 Hydration<span>(代謝UPの鍵!)</span></h2>
+      <div class="water-grid" id="waterGrid">
+        </div>
+      <p>あと <span id="remainWater">5</span> 杯でデトックス完了</p>
+    </section>
+  </main>
+</div>
